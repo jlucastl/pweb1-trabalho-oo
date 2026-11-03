@@ -1,67 +1,68 @@
-# Diário de uso de LLM
+# Diário de utilização de LLM
 
-Registre pelo menos 5 interações relevantes. Em pelo menos uma, mostre um erro ou uma sugestão ruim da LLM que você percebeu e corrigiu.
+# Ferramenta utilizada
+ChatGPT, da OpenAI.
 
-## Interação 1
+## Interação 1 — Planejamento e modelagem
 
-- **Ferramenta e data:**
-- **Prompt:**
+**Período:** outubro de 2026.
 
-```text
-(cole aqui o prompt que você escreveu)
-```
+**Solicitação:** auxílio na definição e organização das classes de um sistema de gerenciamento de oficina mecânica, considerando os conceitos de herança, composição, encapsulamento e polimorfismo.
 
-- **Resumo da resposta:**
-- **O que aceitei, modifiquei ou rejeitei, e por quê:**
+**Resposta:** foram apresentadas sugestões para estruturar as classes `Servico`, `Revisao`, `TrocaOleo`, `Funilaria`, `Cliente`, `Veiculo` e `OrdemServico`, estabelecendo as relações entre elas.
 
-## Interação 2
+**Decisão:** a modelagem proposta foi aproveitada por representar adequadamente os elementos de uma oficina mecânica e possibilitar a aplicação dos princípios de programação orientada a objetos exigidos na atividade.
 
-- **Ferramenta e data:**
-- **Prompt:**
+## Interação 2 — Desenvolvimento das classes
 
-```text
-(cole aqui o prompt que você escreveu)
-```
+**Período:** outubro de 2026.
 
-- **Resumo da resposta:**
-- **O que aceitei, modifiquei ou rejeitei, e por quê:**
+**Solicitação:** orientações para desenvolver as classes em PHP, utilizando propriedades privadas, construtores, métodos, relacionamentos de herança e validações relacionadas às regras de funcionamento da oficina.
 
-## Interação 3
+**Resposta:** foram fornecidas recomendações sobre a distribuição das classes em arquivos individuais, a construção dos métodos e a implementação das regras de negócio.
 
-- **Ferramenta e data:**
-- **Prompt:**
+**Decisão:** as orientações foram utilizadas na organização do código, mantendo uma classe por arquivo. O funcionamento dos métodos e das validações foi verificado por meio do arquivo `teste.php`.
 
-```text
-(cole aqui o prompt que você escreveu)
-```
+## Interação 3 — Armazenamento e persistência dos dados
 
-- **Resumo da resposta:**
-- **O que aceitei, modifiquei ou rejeitei, e por quê:**
+**Período:** outubro e novembro de 2026.
 
-## Interação 4
+**Solicitação:** orientações para implementar um mecanismo de armazenamento que permitisse conservar os registros de clientes, veículos e ordens de serviço mesmo após atualizar a página ou reiniciar o servidor.
 
-- **Ferramenta e data:**
-- **Prompt:**
+**Resposta:** foi apresentada uma alternativa de persistência utilizando as funções `file_get_contents()`, `json_decode()`, `json_encode()` e `file_put_contents()` para realizar a leitura e a gravação de informações em arquivos JSON.
 
-```text
-(cole aqui o prompt que você escreveu)
-```
+**Decisão:** optou-se pelo armazenamento em JSON, pois essa solução atende às necessidades do projeto sem exigir a configuração de um banco de dados, mantendo a implementação mais simples.
 
-- **Resumo da resposta:**
-- **O que aceitei, modifiquei ou rejeitei, e por quê:**
+## Interação 4 — Expansão das funcionalidades
 
-## Interação 5
+**Data:** 2 de novembro de 2026.
 
-- **Ferramenta e data:**
-- **Prompt:**
+**Solicitação:** auxílio para ampliar as funcionalidades do sistema, permitindo o cadastro de clientes e veículos, a criação de ordens de serviço e a associação de diferentes serviços aos atendimentos, preservando o padrão visual da aplicação.
+
+**Resposta:** foram propostas adaptações nos formulários de cadastro, no relacionamento entre clientes, veículos e ordens de serviço, além de ajustes necessários para manter os registros armazenados corretamente.
+
+**Decisão:** as sugestões foram aproveitadas na organização das funcionalidades do arquivo `public/index.php`, mantendo a estrutura visual existente e realizando ajustes pontuais no CSS quando necessário.
+
+## Interação 5 — Identificação e correção de erro
+
+**Data:** 2 de novembro de 2026.
+
+**Problema:** durante a verificação da sintaxe do arquivo principal com o comando `php -l public/index.php`, foi identificada a seguinte mensagem:
 
 ```text
-(cole aqui o prompt que você escreveu)
+PHP Fatal error: strict_types declaration must be the very first statement in the script
 ```
 
-- **Resumo da resposta:**
-- **O que aceitei, modifiquei ou rejeitei, e por quê:**
+**Resposta:** a ferramenta esclareceu que a declaração `declare(strict_types=1)` deve aparecer no início do arquivo PHP, antes de outras instruções executáveis, respeitando a abertura `<?php`.
 
-## O erro que a LLM cometeu
+**Decisão:** a posição da declaração foi ajustada para atender às exigências da linguagem. Após a correção, a análise sintática pôde ser executada sem apresentar o erro anterior.
 
-_(Qual interação, o que estava errado, como você percebeu e como corrigiu.)_
+## Interação 6 — Organização da documentação
+
+**Data:** 2 de novembro de 2026.
+
+**Solicitação:** auxílio na revisão e atualização dos documentos do projeto, incluindo o `README.md`, a descrição da modelagem, os registros de testes e o diário de utilização de ferramentas de inteligência artificial, considerando as funcionalidades desenvolvidas para a oficina mecânica.
+
+**Resposta:** foram apresentadas sugestões de reformulação dos textos, organização das informações técnicas e atualização das descrições para refletir a estrutura das classes, as regras de negócio e os recursos disponíveis no sistema.
+
+**Decisão:** as sugestões foram utilizadas como referência para preparar a documentação, que posteriormente seria revisada e incorporada ao repositório do projeto.
